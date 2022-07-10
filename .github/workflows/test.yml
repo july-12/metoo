@@ -38,3 +38,4 @@ jobs:
         git config user.email seventanyb@gmail.com
         git add .
         git commit -am "build docs"
+         git push

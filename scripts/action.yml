@@ -30,9 +30,9 @@ runs:
   #       test_token: ${{ inputs.token }}
   #     shell: bash
   using: 'node16'
-  steps:
-    - name: Create Branch
-      env:
-        test_token: ${{ inputs.token }}
   main: 'test.js'
+  # steps:
+  #   - name: Create Branch
+  #     env:
+  #       test_token: ${{ inputs.token }}
     

@@ -1,11 +1,9 @@
 name: 'test'
 description: 'run action test'
-env:
-  test_token: ${{ secrets.AUTH_TOKEN }}
 inputs:
   test_token: 
     description: 'token'
-    default: ${{ env.test_token }}
+    default: 'auth_token'
     required: false
   other_token: 
     default: "hao12"

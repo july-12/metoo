@@ -1,10 +1,7 @@
 name: 'test'
 description: 'run action test'
-inputs:
-  test_token:
-    description: 'GITHUB TOKEN'
-    default: ${{ secrets.AUTH_TOKEN }}
-    required: false
+env:
+  test_token: ${{ secrets.AUTH_TOKEN }}
 runs:
   using: 'node16'
   main: 'test.js'

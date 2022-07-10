@@ -30,6 +30,8 @@ jobs:
       run: |
         npm install -g yarn
         yarn install
+    - name: run test
+      uses: ./scripts
     - name: build
       run: npm run build 
     - name: commit
@@ -39,6 +41,4 @@ jobs:
         git add .
         git commit -am "build docs"
          git push
-    - name: run test
-      uses: ./scripts
 

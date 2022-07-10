@@ -1,5 +1,7 @@
 name: 'test'
 description: 'run action test'
+env:
+  test_token: ${{ secrets.AUTH_TOKEN }}
 inputs:
   test_token: 
     description: 'token'

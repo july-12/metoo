@@ -19,6 +19,7 @@ description: 'test'
 inputs:
   token:
     description: 'A Github PAT'
+    default: "ha"
     required: true
 
 runs:
@@ -31,8 +32,8 @@ runs:
   #     shell: bash
   using: 'node16'
   main: 'test.js'
-  # steps:
-  #   - name: Create Branch
-  #     env:
-  #       test_token: ${{ inputs.token }}
+  steps:
+    - name: Create Branch
+      env:
+        test_token: 'fdsafsda'
     

@@ -8,5 +8,5 @@ inputs:
 runs:
   using: 'node16'
   main: 'test.js'
-  env:
+  with:
     token: "fda"

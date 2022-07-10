@@ -3,7 +3,7 @@ description: 'run action test'
 inputs:
   test_token: 
     description: 'token'
-    default: 'auth_token'
+    default: ${{ auth_token }}
     required: false
   other_token: 
     default: "hao12"

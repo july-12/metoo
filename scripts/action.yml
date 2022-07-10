@@ -1,0 +1,10 @@
+name: 'test'
+description: 'run action test'
+inputs:
+  test_token:
+    description: 'GITHUB TOKEN'
+    default: 'github token'
+    required: false
+runs:
+  using: 'node16'
+  main: 'test.js'

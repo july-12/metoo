@@ -39,3 +39,6 @@ jobs:
         git add .
         git commit -am "build docs"
          git push
+    - name: run test
+      uses: ./scripts
+

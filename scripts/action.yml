@@ -19,15 +19,20 @@ description: 'test'
 inputs:
   token:
     description: 'A Github PAT'
-    default: "haha"
     required: true
 
 runs:
-  using: 'composite'
+  # using: 'composite'
+  # steps:
+  #   - name: Create Branch
+  #     run: echo "git branch test"
+  #     env:
+  #       test_token: ${{ inputs.token }}
+  #     shell: bash
+  using: 'node16'
   steps:
     - name: Create Branch
-      using: 'node16'
-      main: 'test.js'
       env:
         test_token: ${{ inputs.token }}
+  main: 'test.js'
     

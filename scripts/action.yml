@@ -1,13 +1,15 @@
 name: 'test'
 description: 'run action test'
 inputs:
-  # test_token: 
-  #   description: 'token'
-  #   default: ${{ test_token }}
-  #   required: false
-  other_token: 
-    type: environment
+  test_token:
+    description: 'token'
+    # default: ${{ test_token }}
     required: true
+  other_token:
+    default: "hao12"
 runs:
   using: 'node16'
   main: 'test.js'
+  env:
+    test_token: ${{ inputs.test_token }}
+    

@@ -1,39 +1,12 @@
-# name: 'test'
-# description: 'run action test'
-# inputs:
-#   test_token:
-#     description: 'token'
-#     # default: ${{ test_token }}
-#     required: true
-#   other_token:
-#     default: "hao12"
-# runs:
-#   using: 'node16'
-#   main: 'test.js'
-#   env:
-#     test_token: ${{ inputs.test_token }}
 name: 'test'
-
-description: 'test'
-
+description: 'run action test'
 inputs:
-  token:
-    description: 'A Github PAT'
-    default: "ha"
-    required: true
-
+  test_token:
+    description: 'token'
+    # default: ${{ secrets.test_token }}
+    required: false
 runs:
-  # using: 'composite'
-  # steps:
-  #   - name: Create Branch
-  #     run: echo "git branch test"
-  #     env:
-  #       test_token: ${{ inputs.token }}
-  #     shell: bash
   using: 'node16'
   main: 'test.js'
-  steps:
-    - name: Create Branch
-      env:
-        test_token: 'fdsafsda'
-    
+  env:
+    token: "fda"

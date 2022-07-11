@@ -4,9 +4,8 @@ inputs:
   test_token:
     description: 'token'
     # default: ${{ secrets.test_token }}
+    default: "a123"
     required: false
 runs:
   using: 'node16'
   main: 'test.js'
-  with:
-    token: "fda"

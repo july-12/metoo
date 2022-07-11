@@ -30,6 +30,10 @@ jobs:
       run: |
         npm install -g yarn
         yarn install
+    - name: set env
+      run: |
+        echo MEE=test > .env
+        echo ORG=haha > .env
     - name: run test
       uses: ./scripts
       with:
